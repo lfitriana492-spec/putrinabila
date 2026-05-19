@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUTRI NABILA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-container">
+    <section id="intro-screen" class="screen active">
+      <h1>PUTRI NABILA</h1>
+      <button id="continueButton">Saya lanjutkan</button>
+    </section>
+
+    <section id="second-screen" class="screen">
+      <h2>PPDB SMK MUHAMADIYAH PRINGSEWU</h2>
+      <p>Selamat datang di halaman penerimaan peserta didik baru.</p>
+      <div class="info-card">
+        <div class="info-row"><span class="label">Nama:</span> PUTRI NABILA</div>
+        <div class="info-row"><span class="label">Tanggal Lahir:</span> 10 Oktober 2008</div>
+        <div class="info-row"><span class="label">Asal Sekolah:</span> SMP Negeri 1 Pringsewu</div>
+        <div class="info-row"><span class="label">Jurusan Pilihan:</span> Rekayasa Perangkat Lunak</div>
+        <div class="info-row"><span class="label">Alamat:</span> Pringsewu, Lampung</div>
+      </div>
+      <button id="backButton">Kembali</button>
+    </section>
+  </main>
+
+  <script>
+    const intro = document.getElementById('intro-screen');
+    const second = document.getElementById('second-screen');
+    const continueButton = document.getElementById('continueButton');
+    const backButton = document.getElementById('backButton');
+
+    continueButton.addEventListener('click', () => {
+      intro.classList.remove('active');
+      second.classList.add('active');
+    });
+
+    backButton.addEventListener('click', () => {
+      second.classList.remove('active');
+      intro.classList.add('active');
+    });
+  </script>
+</body>
+</html>
